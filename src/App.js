@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import CustomNavbar from './components/CustomNavbar'
 import { Component } from 'react'
 import MovieSelect from './components/MovieSelect'
+import MovieCard from './components/MovieCard'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -34,8 +35,12 @@ class App extends Component {
                 />
               </Col>
             </Row>
+            <Row className="justify-content-center mt-5">
+              <Col xs={12} md={6}>
+                <MovieCard movieTitle={this.state.movieTitle} />
+              </Col>
+            </Row>
           </Container>
-          {/* <MovieCard /> */}
         </main>
       </div>
     )
